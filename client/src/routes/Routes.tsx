@@ -8,6 +8,12 @@ const Users = React.lazy(() => import("../pages/users/Users"));
 
 export const Routes = createBrowserRouter([
 
+  // Root - redirect to app
+  {
+    path: "/",
+    element: <Navigate to={PATHS.APP.ROOT} replace />,
+  },
+
   // Authenticated
   {
     path: PATHS.APP.ROOT,
